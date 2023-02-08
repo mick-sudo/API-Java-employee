@@ -29,9 +29,8 @@ public class EmployeeServiceIMPL implements EmployeeService{
     }
 
     @Override
-    public String deleteEmployee(Long id) {
+    public void deleteEmployee(Long id) {
         employeeRepository.deleteById(id);
-        return "Employee removed";
     }
 
     @Override

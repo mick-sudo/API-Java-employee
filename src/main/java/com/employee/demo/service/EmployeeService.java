@@ -14,5 +14,5 @@ public interface EmployeeService {
 
     Optional<Employee> getEmployeByID(Long id);
 
-    String deleteEmployee(Long id);
+     void deleteEmployee(Long id);
 }

@@ -17,7 +17,7 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    @PostMapping("/save")
+    @PostMapping
     public Employee createEmployee(@RequestBody Employee employee){
         return employeeService.addEmployee(employee);
     }
@@ -35,8 +35,8 @@ public class EmployeeController {
         return employeeService.updatEmployee(id, employee);
     }
 
-    @DeleteMapping("{id}")
-    public String deleteEmployeeById(@PathVariable Long id){
-        return employeeService.deleteEmployee(id);
+    @DeleteMapping("/{id}")
+    public void deleteEmployeeById(@PathVariable Long id){
+        employeeService.deleteEmployee(id);
     }
 }
